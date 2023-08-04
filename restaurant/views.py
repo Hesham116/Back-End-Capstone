@@ -12,7 +12,6 @@ def index(request):
     return render(request, 'index.html', {})
 
 
-
 class BookingViewSet(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Booking.objects.all()
@@ -29,7 +28,6 @@ class MenuItemsView(generics.ListCreateAPIView):
             permission_classes = [IsAuthenticated]
 
         return [permission() for permission in permission_classes]
-
 
 
 class SingleItemView(generics.RetrieveUpdateDestroyAPIView):

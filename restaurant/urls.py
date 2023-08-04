@@ -7,5 +7,5 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('menu-items/', views.MenuItemsView.as_view()),
     path('menu-items/<int:pk>', views.SingleItemView.as_view()),
-    path('api-token-auth/', obtain_auth_token),
+    path('token-auth/', obtain_auth_token),
 ]
